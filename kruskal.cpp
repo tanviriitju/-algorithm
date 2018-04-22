@@ -76,7 +76,7 @@ int main()
                 nd.a=start;
                 nd.b=end;
                 nd.c=doller;
-                totalCost+=doller;
+               
                 pq.push(nd);
             }
 
@@ -101,7 +101,7 @@ int main()
             }
 
 
-    cout<<totalCost-Tcost;
+    cout<<Tcost;
 
     cout<<endl;
 
