@@ -1,9 +1,7 @@
-//LCA using sparse table
-//Complexity: O(NlgN,lgN)
 #define mx 100002
-int L[mx]; //লেভেল
-int P[mx][22]; //স্পার্স টেবিল
-int T[mx]; //প্যারেন্ট
+int L[mx]; 
+int P[mx][22]; 
+int T[mx]; 
 vector<int>g[mx];
 void dfs(int from,int u,int dep)
 {
@@ -17,7 +15,7 @@ void dfs(int from,int u,int dep)
     }
 }
 
-int lca_query(int N, int p, int q) //N=নোড সংখ্যা
+int lca_query(int N, int p, int q) 
   {
       int tmp, log, i;
 
@@ -48,7 +46,7 @@ int lca_query(int N, int p, int q) //N=নোড সংখ্যা
 
 void lca_init(int N)
   {
-      memset (P,-1,sizeof(P)); //শুরুতে সবগুলো ঘরে -১ থাকবে
+      memset (P,-1,sizeof(P)); 
       int i, j;
        for (i = 0; i < N; i++)
           P[i][0] = T[i];
